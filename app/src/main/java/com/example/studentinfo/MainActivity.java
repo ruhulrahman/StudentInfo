@@ -3,6 +3,7 @@ package com.example.studentinfo;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding =  DataBindingUtil.setContentView(this, R.layout.activity_main);
+
 
 
         databaseStudent = FirebaseDatabase.getInstance().getReference("student");
@@ -47,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Name field is empty", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void viewData(View view) {
+        Intent intent = new Intent(MainActivity.this, StudentsListActivity.class);
+        startActivity(intent);
     }
 }
 //apps crahsed

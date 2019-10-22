@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">StudentInfo</string>
     <array name="department">
         <item>CSE</item>
         <item>EEE</item>
         <item>BBA</item>
         <item>LLB</item>
     </array>
+    <string name="app_name">StudentInfo</string>
 </resources>
