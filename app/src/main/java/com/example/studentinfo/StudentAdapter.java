@@ -1,6 +1,7 @@
 package com.example.studentinfo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,9 +37,18 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Student student = studentArrayList.get(position);
+        final Student student = studentArrayList.get(position);
         holder.binding.nameTV.setText("Name: "+student.getName());
         holder.binding.departmentTV.setText("Department: "+student.getDepartment());
+        holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, AddSemesterActivity.class);
+                intent.putExtra("StudentName", student.getName());
+                intent.putExtra("StudentId", student.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

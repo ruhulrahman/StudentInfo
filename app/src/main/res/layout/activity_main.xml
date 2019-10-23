@@ -27,6 +27,8 @@
                 android:layout_height="wrap_content"/>
 
             <Button
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"
                 android:layout_marginTop="10dp"
                 android:id="@+id/AddBtn"
                 android:text="Save Data"
@@ -34,6 +36,8 @@
                 android:layout_height="wrap_content"/>
 
             <Button
+                android:background="@android:color/holo_blue_dark"
+                android:textColor="@android:color/white"
                 android:layout_marginTop="10dp"
                 android:onClick="viewData"
                 android:text="View Data"

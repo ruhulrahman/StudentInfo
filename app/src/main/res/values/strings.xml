@@ -1,9 +1,23 @@
 <resources>
+    <string name="app_name">StudentInfo</string>
     <array name="department">
         <item>CSE</item>
         <item>EEE</item>
         <item>BBA</item>
         <item>LLB</item>
     </array>
-    <string name="app_name">StudentInfo</string>
+    <array name="semester">
+        <item>1st Semester</item>
+        <item>2nd Semester</item>
+        <item>3rd Semester</item>
+        <item>4th Semester</item>
+        <item>5th Semester</item>
+        <item>6th Semester</item>
+        <item>7th Semester</item>
+        <item>8th Semester</item>
+        <item>9th Semester</item>
+        <item>10th Semester</item>
+        <item>11th Semester</item>
+        <item>12th Semester</item>
+    </array>
 </resources>
