@@ -57,7 +57,7 @@ public class StudentsListActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError error) {
                 // Failed to read value
-                Toast.makeText(StudentsListActivity.this, "Data Load Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(StudentsListActivity.this, "Data Load Failed"+error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
