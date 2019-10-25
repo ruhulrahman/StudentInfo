@@ -1,4 +1,4 @@
-package com.example.studentinfo;
+package com.example.studentinfo.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +10,10 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.studentinfo.R;
+import com.example.studentinfo.adapter.SemesterAdapter;
 import com.example.studentinfo.databinding.ActivityAddSemesterBinding;
+import com.example.studentinfo.model.Semester;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -47,7 +50,7 @@ public class AddSemesterActivity extends AppCompatActivity {
         binding.addSemesterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveSemester(studentId);
+            saveSemester(studentId);
             }
         });
 

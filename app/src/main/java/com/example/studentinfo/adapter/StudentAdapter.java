@@ -1,20 +1,20 @@
-package com.example.studentinfo;
+package com.example.studentinfo.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.studentinfo.activity.AddSemesterActivity;
+import com.example.studentinfo.R;
 import com.example.studentinfo.databinding.ItemStudentsBinding;
+import com.example.studentinfo.model.Student;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHolder> {
@@ -29,7 +29,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemStudentsBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.item_students,parent,false);
+        ItemStudentsBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_students,parent,false);
         return new ViewHolder(binding);
 //        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_students, parent, false);
 //        return new ViewHolder(view);

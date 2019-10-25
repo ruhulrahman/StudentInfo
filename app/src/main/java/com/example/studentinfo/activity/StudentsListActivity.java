@@ -1,4 +1,4 @@
-package com.example.studentinfo;
+package com.example.studentinfo.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
+import com.example.studentinfo.R;
+import com.example.studentinfo.adapter.StudentAdapter;
 import com.example.studentinfo.databinding.ActivityStudentsListBinding;
+import com.example.studentinfo.model.Student;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

@@ -1,4 +1,4 @@
-package com.example.studentinfo;
+package com.example.studentinfo.model;
 
 public class Semester {
     private String studentId;

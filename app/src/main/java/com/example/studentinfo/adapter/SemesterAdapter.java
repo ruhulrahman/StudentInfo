@@ -1,15 +1,16 @@
-package com.example.studentinfo;
+package com.example.studentinfo.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.studentinfo.R;
 import com.example.studentinfo.databinding.ItemSemesterBinding;
+import com.example.studentinfo.model.Semester;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class SemesterAdapter extends RecyclerView.Adapter<SemesterAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemSemesterBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.item_semester, parent, false);
+        ItemSemesterBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_semester, parent, false);
 
         return new ViewHolder(binding);
     }
