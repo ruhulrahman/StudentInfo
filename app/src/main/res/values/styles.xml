@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NoTitle" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="Theme.MyApp1" parent="Theme.MaterialComponents.DayNight">
         <!-- New MaterialComponents attributes. -->
 <!--        <item name="colorPrimaryVariant">@color/my_app_primary_variant_color</item>-->
