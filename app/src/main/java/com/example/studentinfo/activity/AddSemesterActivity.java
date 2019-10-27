@@ -28,7 +28,8 @@ import java.util.List;
 public class AddSemesterActivity extends AppCompatActivity {
     private ActivityAddSemesterBinding binding;
     private String studentName, studentId;
-    private String cgpa, semesterName;
+    private String semesterName, studentCgpa;
+    private double  cgpa;
 
 
     private List<Semester> semesterList;
@@ -89,10 +90,11 @@ public class AddSemesterActivity extends AppCompatActivity {
 
     private void saveSemester(String studentId) {
         DatabaseReference databaseSemester = databaseReference.child("student").child(studentId).child("semester");
-        cgpa = binding.cgpaET.getText().toString().trim();
+        studentCgpa = binding.cgpaET.getText().toString().trim();
+        cgpa = Double.parseDouble(studentCgpa);
         semesterName = binding.semesterSn.getSelectedItem().toString().trim();
 
-        if(!TextUtils.isEmpty(cgpa)){
+        if(!TextUtils.isEmpty(studentCgpa)){
             String semesterId = databaseSemester.push().getKey();
             Semester semester = new Semester(semesterId, semesterName, cgpa);
             databaseSemester.child(semesterId).setValue(semester).addOnCompleteListener(new OnCompleteListener<Void>() {

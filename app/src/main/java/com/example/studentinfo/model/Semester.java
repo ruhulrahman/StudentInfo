@@ -3,13 +3,13 @@ package com.example.studentinfo.model;
 public class Semester {
     private String studentId;
     private String studentSemester;
-    private String studentCgpa;
+    private double studentCgpa;
 
     public Semester() {
 
     }
 
-    public Semester(String studentId, String studentSemester, String studentCgpa) {
+    public Semester(String studentId, String studentSemester, double studentCgpa) {
         this.studentId = studentId;
         this.studentSemester = studentSemester;
         this.studentCgpa = studentCgpa;
@@ -23,7 +23,7 @@ public class Semester {
         return studentSemester;
     }
 
-    public String getStudentCgpa() {
+    public double getStudentCgpa() {
         return studentCgpa;
     }
 }

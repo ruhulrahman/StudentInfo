@@ -35,7 +35,7 @@ public class SemesterAdapter extends RecyclerView.Adapter<SemesterAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Semester semester = semesterList.get(position);
-        holder.binding.cgpaTV.setText("CGPA: "+semester.getStudentCgpa());
+        holder.binding.cgpaTV.setText("CGPA: "+String.valueOf(semester.getStudentCgpa()));
         holder.binding.semesterNameTV.setText("Semester Name: "+semester.getStudentSemester());
     }
 

@@ -10,6 +10,7 @@
 
         <TextView
             android:id="@+id/stnNameTV"
+            android:textColor="@android:color/holo_blue_dark"
             android:text="Student Name"
             android:textSize="22sp"
             android:textAlignment="center"
@@ -32,7 +33,11 @@
 
         <Button
             android:id="@+id/addSemesterBtn"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
             android:text="Add Semester"
+            android:textAllCaps="false"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
