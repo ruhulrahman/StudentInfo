@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/studentCardView"
         android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:orientation="vertical">
+        android:padding="10dp"
+        android:background="#60A7A5A5">
 
-        <TextView
-            android:textColor="@android:color/holo_red_dark"
-            android:layout_marginTop="10dp"
-            android:id="@+id/nameTV"
-            android:text="Ruhul Amin"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:textColor="@android:color/holo_green_dark"
-            android:layout_marginTop="10dp"
-            android:id="@+id/departmentTV"
-            android:text="CSE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="10dp"
+                android:id="@+id/nameTV"
+                android:text="Ruhul Amin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginTop="10dp"
+                android:id="@+id/departmentTV"
+                android:text="CSE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
 
-    </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
 </layout>

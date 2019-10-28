@@ -1,11 +1,16 @@
 package com.example.studentinfo.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.example.studentinfo.R;
@@ -40,7 +45,34 @@ public class StudentsListActivity extends AppCompatActivity {
 
         getStudents();
         configRecyclerView();
+
+        //registerForContextMenu(studentRV);
     }
+
+   // @Override
+//    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+//        super.onCreateContextMenu(menu, v, menuInfo);
+//        getMenuInflater().inflate(R.menu.student_menu, menu);
+//    }
+//
+//    @Override
+//    public boolean onContextItemSelected(@NonNull MenuItem item) {
+//        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+//
+//        switch (item.getItemId()){
+//            case R.id.deleteId:
+//                studentList.remove(info.position);
+//                studentAdapter.notifyDataSetChanged();
+//                Toast.makeText(this, "You Clicked Delete button", Toast.LENGTH_SHORT).show();
+//                return true;
+//            case R.id.editId:
+//                Toast.makeText(this, "You Clicked Edit button", Toast.LENGTH_SHORT).show();
+//                return true;
+//                default:
+//                    return super.onContextItemSelected(item);
+//        }
+//        //return super.onContextItemSelected(item);
+//    }
 
     private void getStudents() {
         databaseStudent.addValueEventListener(new ValueEventListener() {
@@ -67,5 +99,7 @@ public class StudentsListActivity extends AppCompatActivity {
     private void configRecyclerView() {
         studentRV.setLayoutManager(new LinearLayoutManager(this));
         studentRV.setAdapter(studentAdapter);
+
+
     }
 }
