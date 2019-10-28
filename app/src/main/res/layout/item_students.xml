@@ -1,35 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/studentCardView"
-        android:layout_margin="5dp"
-        android:padding="10dp"
-        android:background="#60A7A5A5">
+        android:layout_margin="5dp">
 
         <LinearLayout
+            android:padding="10dp"
+            android:background="#60A7A5A5"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:textColor="@android:color/holo_red_dark"
-                android:layout_marginTop="10dp"
-                android:id="@+id/nameTV"
-                android:text="Ruhul Amin"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:textColor="@android:color/holo_green_dark"
-                android:layout_marginTop="10dp"
-                android:id="@+id/departmentTV"
-                android:text="CSE"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/nameTV"
+                    android:text="Ruhul Amin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@android:color/holo_green_dark"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/departmentTV"
+                    android:text="CSE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/studentCntxMenu"
+                    android:src="@drawable/ic_menu_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
 
-
-
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 </layout>

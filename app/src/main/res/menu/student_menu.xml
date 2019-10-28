@@ -5,12 +5,15 @@
         android:id="@+id/deleteId"
         android:title="Delete"
         android:icon="@drawable/ic_delete_black_24dp"
-        android:iconTint="@android:color/holo_red_dark"
-        app:showAsAction="collapseActionView"/>
+        android:iconTint="@android:color/holo_red_dark"/>
     <item
         android:id="@+id/editId"
         android:title="Edit"
         android:icon="@drawable/ic_edit_black_24dp"
-        android:iconTint="#2196F3"
-        app:showAsAction="collapseActionView"/>
+        android:iconTint="#2196F3"/>
+    <item
+        android:id="@+id/detailsId"
+        android:title="Details"
+        android:icon="@drawable/ic_details_black_24dp"
+        android:iconTint="#2196F3"/>
 </menu>

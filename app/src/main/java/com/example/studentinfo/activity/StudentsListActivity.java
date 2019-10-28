@@ -99,7 +99,5 @@ public class StudentsListActivity extends AppCompatActivity {
     private void configRecyclerView() {
         studentRV.setLayoutManager(new LinearLayoutManager(this));
         studentRV.setAdapter(studentAdapter);
-
-
     }
 }

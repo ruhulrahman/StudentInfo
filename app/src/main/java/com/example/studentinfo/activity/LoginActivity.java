@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
-        databaseUser = FirebaseDatabase.getInstance().getReference().child("users");
+        //databaseUser = FirebaseDatabase.getInstance().getReference().child("users");
 
         
     }
