@@ -104,10 +104,6 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
                 popupMenu.show();
             }
         });
-
-
-
-
     }
 
     @Override

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFF"
         android:orientation="vertical"
-        android:padding="16dp">
-
+        android:padding="16dp"
+        tools:context=".activity.SignUpActivity">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -16,8 +18,36 @@
             android:textSize="33dp"
             android:textStyle="bold" />
 
+        <EditText
+            android:id="@+id/nameET"
+            android:hint="Enter Name"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/emailET"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawablePadding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/passwordET"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <Button
+            android:id="@+id/signUpBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -38,7 +68,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#3b5998"
-            android:text="Sign in with facebook"
+            android:text="Sign up with facebook"
             android:textAllCaps="false"
             android:textColor="#fff" />
 
@@ -48,7 +78,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:background="#55acee"
-            android:text="Sign in with twitter"
+            android:text="Sign up with twitter"
             android:textAllCaps="false"
             android:textColor="#fff" />
 
@@ -56,9 +86,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#dc4e41"
-            android:text="Sign in with google +"
+            android:text="Sign up with google +"
             android:textAllCaps="false"
             android:textColor="#fff" />
-
     </LinearLayout>
 </layout>
