@@ -25,3 +25,4 @@ public class Student {
         return department;
     }
 }
+

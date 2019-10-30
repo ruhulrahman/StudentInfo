@@ -6,7 +6,6 @@ import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -26,7 +25,7 @@ public class SignUpActivity extends AppCompatActivity {
     private ActivitySignUpBinding binding;
     private String name, email, password;
     private List<User> users;
-    private FirebaseAuth mAuth;
+    private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +33,13 @@ public class SignUpActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up);
 
         // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
 
+        if (firebaseAuth.getCurrentUser()!=null){
+            startActivity(new Intent(SignUpActivity.this,MainActivity.class));
+            finish();
+        }
 
         binding.signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,17 +68,18 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     private void SignUpUser(String email, String password) {
-        mAuth.createUserWithEmailAndPassword(email, password)
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(SignUpActivity.this, "User Created Successful", Toast.LENGTH_SHORT).show();
-                            FirebaseUser currentUser = mAuth.getCurrentUser();
+                            FirebaseUser currentUser = firebaseAuth.getCurrentUser();
                             String id = currentUser.getUid();
                             if(id!= null){
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 startActivity(intent);
+                                finish();
                             }
                         }else{
                             Toast.makeText(SignUpActivity.this, "User not created", Toast.LENGTH_SHORT).show();
