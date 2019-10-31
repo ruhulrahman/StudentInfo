@@ -7,6 +7,16 @@
         android:layout_height="match_parent"
         tools:context=".activity.MainActivity">
 
+        <TextView
+            android:id="@+id/userNameTV"
+            android:text="Ruhul Amin"
+            android:gravity="center_horizontal"
+            android:textColor="#90c40909"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 
 
         <LinearLayout
